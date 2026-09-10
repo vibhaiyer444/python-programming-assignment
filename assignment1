@@ -1,0 +1,25 @@
+students = {
+    101: ("Rahul", "CSE", 85),
+    102: ("Priya", "ECE", 90),
+    103: ("Amit", "ME", 78)
+}
+
+print("Initial Student Records:")
+for roll_no, details in students.items():
+    print(roll_no, details)
+
+print("\n1. Adding a new student...")
+students[104] = ("Sneha", "IT", 88)
+
+print("2. Deleting student with Roll No. 102...")
+del students[102]
+
+print("3. Updating details of student with Roll No. 103...")
+students[103] = ("Amit Kumar", "CSE", 82)
+
+print("\n4. Final Student Records:")
+print("Roll No.\tName\t\tBranch\tMarks")
+
+for roll_no, details in students.items():
+    name, branch, marks = details
+    print(f"{roll_no}\t\t{name}\t\t{branch}\t{marks}")
